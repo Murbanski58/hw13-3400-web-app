@@ -23,7 +23,7 @@ AZURE_KEY_VAULT_URL = os.environ["AZURE_KEY_VAULT_URL"]
 credential = DefaultAzureCredential()
 client = SecretClient(vault_url=AZURE_KEY_VAULT_URL, credential=credential)
 
-_dbhostname = client.get_secret("HW13-DBHOSTNAME")
+_dbhostname = client.get_secret("HW13-DBHOSTNAMES")
 _dbusername = client.get_secret("HW13-DBUSERNAME")
 _dbpassword = client.get_secret("HW13-DBPASSWORD")
 _dbname = client.get_secret("HW13-DBNAME")
